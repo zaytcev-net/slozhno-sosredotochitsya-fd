@@ -1,7 +1,7 @@
 :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
   --accent-color: #ffc2e6;
-  --filling-color: #ffc2e6;
+  --filling-color: #FFEEF6;
   --complementary-color: #ff8dcb;
   --text-color: #353430;
   --color-theme-menu: #353430;
@@ -17,7 +17,7 @@
   :root {
     --background-image: url(../images/cover-image-light.png);
     --accent-color: #ffc2e6;
-    --filling-color: #ffc2e6;
+    --filling-color: #FFEEF6;
     --complementary-color: #ff8dcb;
     --text-color: #353430;
     --color-theme-menu: #353430;
