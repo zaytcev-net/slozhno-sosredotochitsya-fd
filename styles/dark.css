@@ -1,11 +1,10 @@
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
-  --accent-color: #DB00FF;
+  --accent-color: #db00ff;
   --filling-color: #000028;
-  --complementary-color: #FF0070;
-  --text-color: #F1B2CE;
-  --color-theme-menu: #FF0070;
-  --color-subtitle: #FF0070;
+  --complementary-color: #ff0070;
+  --text-color: #f1b2ce;
+  --color-theme-menu: #ff0070;
+  --color-subtitle: #ff0070;
   --complementary-text-color: #000028;
 }
-

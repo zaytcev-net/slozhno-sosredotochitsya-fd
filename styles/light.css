@@ -1,8 +1,8 @@
 :root.theme-light {
   --background-image: url(../images/cover-image-light.png);
-  --accent-color: #FFC2E6;
-  --filling-color: #FFC2E6;
-  --complementary-color: #FF8DCB;
+  --accent-color: #ffc2e6;
+  --filling-color: #ffc2e6;
+  --complementary-color: #ff8dcb;
   --text-color: #353430;
   --color-theme-menu: #353430;
   --color-subtitle: #353430;
@@ -16,9 +16,9 @@
 @media (prefers-color-scheme: light) {
   :root {
     --background-image: url(../images/cover-image-light.png);
-    --accent-color: #FFC2E6;
-    --filling-color: #FFC2E6;
-    --complementary-color: #FF8DCB;
+    --accent-color: #ffc2e6;
+    --filling-color: #ffc2e6;
+    --complementary-color: #ff8dcb;
     --text-color: #353430;
     --color-theme-menu: #353430;
     --color-subtitle: #353430;
@@ -26,6 +26,6 @@
   }
 
   .theme-auto .page .header .decorative__element {
-  display: none;
+    display: none;
+  }
 }
-} 

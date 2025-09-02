@@ -1,47 +1,45 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: var(--background-image);
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--filling-color);
   position: relative;
   font-family: var(--font-family);
   font-size: 1.125em;
+  background-color: var(--filling-color);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-/*HEADER*/
+
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  block-size: max(668px, 100vh);
   padding: 10px;
-  position: relative;
+  block-size: max(668px, 100vh);
 }
 
 .decorative__element {
   position: absolute;
   top: 10px;
   right: 19px;
-  text-transform: uppercase;
   color: var(--color-dec-el);
+  text-transform: uppercase;
 }
 
 .decorative__element::after {
   content: "";
-  border-radius: 50%;
-  background-color: var(--color-dec-el);
   display: inline-block;
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--color-dec-el);
+  background-color: var(--color-dec-el);
   block-size: 9px;
   inline-size: 9px;
-  margin-inline-start: 10px;
-  box-shadow: 0 0 4px 2px var(--color-dec-el);
 }
 
 .decorated-zone::after,
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
@@ -50,15 +48,15 @@
 .decorated-zone::before {
   top: 10px;
   right: 10px;
-  border-block-start: 1px solid var(--color-theme-menu);
   border-inline-end: 1px solid var(--color-theme-menu);
+  border-block-start: 1px solid var(--color-theme-menu);
 }
 
 .decorated-zone::after {
   bottom: 10px;
   left: 10px;
-  border-block-end: 1px solid var(--color-theme-menu);
   border-inline-start: 1px solid var(--color-theme-menu);
+  border-block-end: 1px solid var(--color-theme-menu);
 }
 
 .header__theme-menu {
@@ -75,14 +73,15 @@
 }
 
 .header__theme-menu-button {
-  font-family: var(--font-family);
-  text-transform: lowercase;
-  background-color: transparent;
+  width: 70px;
   border: none;
   color: var(--color-theme-menu);
-  width: 70px;
-  min-block-size: 26px;
+  font-family: var(--font-family);
   line-height: 100%;
+  text-transform: lowercase;
+  background-color: transparent;
+  cursor: pointer;
+  min-block-size: 26px;
 }
 
 .header__theme-menu-button:hover {
@@ -99,24 +98,26 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--color-theme-menu);
+  cursor: default;
+  pointer-events: none;
 }
 
 .title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--accent-color);
-  text-shadow: 4px 4px 0 var(--complementary-color);
-  line-height: 83%;
   align-self: center;
+  color: var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 4px 4px 0 var(--complementary-color);
 }
 
 .title-decor {
-  background-color: var(--complementary-color);
+  align-self: center;
+  height: min-content;
   color: var(--complementary-text-color);
   font-weight: 700;
   font-size: 1.125rem;
-  height: min-content;
-  align-self: center;
   line-height: 130%;
+  background-color: var(--complementary-color);
 }
 
 .content__section {
@@ -149,7 +150,8 @@
 
 .text-content-link {
   text-decoration: none;
-  text-shadow: 2px 1px var(--complementary-color)
+  text-shadow: 2px 1px var(--complementary-color);
+  cursor: pointer;
 }
 
 .text-content-link:hover {
@@ -185,11 +187,11 @@
 }
 
 .footer {
-  height: max(668px, 100vh);
+  position: relative;
   display: grid;
   justify-content: center;
   align-items: center;
-  position: relative;
+  height: max(668px, 100vh);
 }
 
 .footer__title {
@@ -198,8 +200,8 @@
 
 @media (width >= 768px) {
   .header {
-    block-size: max(1024px, 100vh);
     padding: 0;
+    block-size: max(1024px, 100vh);
   }
 
   .decorative__element {
@@ -223,20 +225,20 @@
   }
 
   .title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header .title-decor {
-    width: calc(50% - 20px);
     justify-self: end;
     align-self: center;
+    width: calc(50% - 20px);
     margin-inline-end: 20px;
     margin-block-end: 20px;
   }
 
   .content__section {
-    padding: 60px 20px;
     gap: 80px;
+    padding: 60px 20px;
   }
 
   .section {
@@ -261,8 +263,8 @@
   }
 
   .gallery__wrapper {
-    grid-column: 1 / -1;
     grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
     gap: 20px;
   }
 
@@ -289,11 +291,11 @@
   }
 
   .header__theme-menu {
-    margin-inline-end: 0;
     justify-self: center;
     align-self: flex-start;
     min-width: 70px;
     min-height: 98px;
+    margin-inline-end: 0;
   }
 
   .header__theme-menu-list {
