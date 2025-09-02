@@ -74,10 +74,6 @@
   gap: 10px;
 }
 
-.header__theme-menu-item {
-  
-}
-
 .header__theme-menu-button {
   font-family: var(--font-family);
   text-transform: lowercase;
@@ -91,6 +87,14 @@
 
 .header__theme-menu-button:hover {
   border: 1px solid rgb(from var(--color-theme-menu) r g b / 0.4);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--color-theme-menu);
 }
 
 .header__theme-menu-button_active {
@@ -146,6 +150,18 @@
 .text-content-link {
   text-decoration: none;
   text-shadow: 2px 1px var(--complementary-color)
+}
+
+.text-content-link:hover {
+  text-decoration: underline;
+}
+
+.text-content-link:focus {
+  outline: none;
+}
+
+.text-content-link:focus-visible {
+  outline: 1px solid var(--text-color);
 }
 
 .title-decor-accent {
